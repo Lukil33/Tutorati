@@ -1,0 +1,95 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{amsmath}
+
+\makeatletter
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+\newcommand{\@subtitle}{}
+\pretitle{
+  \begin{center}
+  \LARGE
+}
+\posttitle{
+  \par\vskip0.5em
+  \large\@subtitle
+  \end{center}
+}
+\makeatother
+
+\title{Tutorato 02}
+\subtitle{La chiamata del destino}
+\author{Prigione Luca}
+\date{16/10/XXXX}
+
+\begin{document}
+\pagestyle{empty}
+
+\maketitle
+
+\section*{Note}
+  \begin{itemize}
+    \item Potete usare solo la libreria standard di input/output quindi \texttt{stdio.h} in C oppure \texttt{iostream} in C++.
+  \end{itemize}
+
+\section*{La bancarella}
+Al mattino, Lele si svegliò deciso: quel messaggio inciso sulla pietra parlava di un tesoro nascosto, e lui doveva prepararsi per l'avventura. Prima di partire, però, serviva l'armamentario giusto.
+Si diresse al mercato cittadino, un trambusto di colori, suoni e profumi. Tra le numerose bancarelle, ne trovò una piena di oggetti curiosi.
+Il mercante, un uomo basso e robusto con un sorriso furbo, si presentò:
+
+«Io sono Fad. Sei qui per partire? Di sicuro ho quello che fa per te!»
+Poi aggiunse: «Oggi c'è un'offerta speciale: se riesci a decifrare qual è l'oggetto che costa meno, ti regalo tutto l'armamentario che vuoi!»\\
+Fad osservò Lele con un sorriso malizioso. «Per scoprire qual è l'oggetto che costa meno, dovrai risolvere questo indovinello.»
+
+Sia data una matrice M di dimensioni NxN contenente dei prezzi parziali.
+Il vostro compito è calcolare il costo totale di ogni oggetto, sapendo che il costo dell'oggetto in posizione (X,Y) è dato dalla formula:
+\begin{equation*}C[X][Y]=M[X][Y]+M[Y][X]\end{equation*}
+Successivamente, dovrete individuare il costo minimo tra tutti gli oggetti e stampare una delle coppie di indici (X,Y) che permette di raggiungere tale costo.\\
+Lele accettò l'offerta, pronto a mettere alla prova la sua mente prima di scegliere il suo armamentario.
+
+\section*{Imprevisto}
+Vista l'astuzia e la bravura di Lele nel risolvere l'enigma, Fad iniziò a preoccuparsi.\\
+Proprio quando Lele stava per terminare, il mercante fece un gesto improvviso: raccolse di fretta la sua mercanzia, afferrò il computer di Lele e, senza dire una parola, si dileguò tra la folla del mercato, sparendo a gambe levate.
+Poichè il ladro vi ha rubato il computer non potrete più usare l'interfaccia grafica per creare i file, ma dovrete utilizzare il terminale.
+
+\section*{Un gendarme sfaticato}
+Dopo il furto, Lele non perse tempo e si diresse subito dalla stazione dei gendarmi, sperando di ottenere aiuto per ritrovare il mercante Fad.
+Davanti al banco, incontrò Piterballs, un poliziotto dal carattere pigro e deciso a continuare il suo pisolino pomeridiano. Appena Lele iniziò a raccontare la sua disavventura, Piterballs gli porse un fascicolo pieno di scartoffie da compilare.
+«Compila questo, poi vedremo,» brontolò il gendarme, cercando di sbarazzarsi in fretta del “seccatore”.
+Lele, esasperato ma determinato, prese in mano le carte, pronto a districarsi tra moduli e richieste burocratiche.
+
+Dovete scrivere una funzione: \begin{equation*}void strcpy(char *src, char *dest)\end{equation*} che dato un vettore di caratteri in input `src' copia il contenuto in `dest' ed una funzione: \begin{equation*}bool strcmp(char *src, char *dest)\end{equation*} che dati i vettore di caratteri in input `src' e `dest' ritorna se i due vettori sono uguali.\\
+P.S.: Inutile dire che non potete usare le funzioni già esistenti presenti nella libreria standard.\\
+\\
+Sfida: Per i ragazzi che hanno fatto le stringhe potete provare a riscrivere la funzione utilizzando le strighe al posto dei vettori di caratteri.
+
+\section*{Banca dati}
+Una volta compilati tutti i moduli con pazienza, precisione e l'aiuto di qualche funzione ben scritta Lele tornò dal gendarme, portando con sé una pila ordinata di scartoffie.
+Piterballs, che ormai non aveva più scuse per continuare a dormire, sospirò rumorosamente.
+
+«Ugh… adesso mi tocca ricordare a memoria tutte le persone con cui dovrò parlare… e le loro deposizioni!» mugugnò, già sudando al pensiero.\\
+Ma prima che potesse disperarsi troppo, Lele fece un passo avanti.
+
+«Tranquillo, posso aiutarti io. Costruiremo una banca dati semplice ma efficace così da non poter dimenticare più nulla.»\\
+Il volto di Piterballs si rallegrò all'improvviso, come se una luce si fosse accesa nella sua mente stanca, il gendarme spostò un mucchio di carte da una sedia e fece cenno a Lele di accomodarsi.
+Era tempo di costruire insieme una vera banca dati.
+
+Scrivete un programma che simuli una banca dati nella quale sia possibile gestire numeri di identificazione.
+Il programma dovrà avere 4 funzioni che permetteranno di:
+\begin{itemize}
+  \item \textbf{aggiungere} un nuovo numero alla banca dati,
+  \item \textbf{rimuovere} un numero esistente,
+  \item \textbf{cercare} un numero per verificarne la presenza,
+  \item \textbf{stampare} tutti i numeri attualmente presenti nella banca dati.
+\end{itemize}
+Sfida: Per i ragazzi che hanno nozioni di complessità potete provare a implementare la banca dati con una ricerca di costo O\ (log(n)).
+
+\noindent\rule{\linewidth}{0.4pt}
+\section*{Esercizi aggiuntivi}
+Se avete già finito e volete qualche esercizio in più chiedete al Tutor, così potete provare a testare il vostro livello.
+
+\end{document}

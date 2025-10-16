@@ -12,3 +12,4 @@ auto/
 *.bbl
 *.fdb_latexmk
 *.fls
+*.dvi
