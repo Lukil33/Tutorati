@@ -13,3 +13,4 @@ auto/
 *.fdb_latexmk
 *.fls
 *.dvi
+*.synctex
