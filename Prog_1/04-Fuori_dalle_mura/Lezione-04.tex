@@ -1,0 +1,93 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{amsmath}
+
+\makeatletter
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+\newcommand{\@subtitle}{}
+\pretitle{
+  \begin{center}
+  \LARGE
+}
+\posttitle{
+  \par\vskip0.5em
+  \large\@subtitle
+  \end{center}
+}
+\makeatother
+
+\title{Tutorato 04}
+\subtitle{Fuori dalle mura}
+\author{Prigione Luca}
+\date{06/11/XXXX}
+
+\begin{document}
+\pagestyle{empty}
+
+\maketitle
+
+\section*{Note}
+  \begin{itemize}
+    \item Potete usare solo la libreria standard di input/output quindi \texttt{stdio.h} in C oppure \texttt{iostream} in C++.
+  \end{itemize}
+
+\section*{Il frate}
+Lasciata alle spalle la confusione dei bassifondi, Lele si avviò finalmente verso il limitare della città, l’avventura lo attendeva.
+Camminando, intravide una figura familiare sul sentiero.
+Era il Frate Gab.
+Da anni viveva nel monastero cittadino, ma tutti sapevano che il suo sogno era quello di viaggiare.
+Quando si accorse di Lele, il frate gli rivolse un sorriso luminoso:
+
+«Fratello viandante! Che lieta coincidenza! Anch’io mi sto incamminando verso le mura. Vuoi condividere un tratto di strada?»\\
+Dopo un po’, per passare il tempo, Gab propose con entusiasmo:
+
+«Che ne dici di un piccolo gioco? È un indovinello molto antico tra i frati»
+
+«Il gioco è semplice, ti verranno date due cifre sotto forma di numero decimale e tu dovrai scambiare tra i due numeri le corrispondenti ultime 8 cifre della propria rappresentazione binaria. Insomma, in fin dei conti è solo semplice matematica!»\\
+Lele sorrise. Di giochi così ne aveva già affrontati, ma non voleva deludere l’amico.\\
+P.S.: Per chi lo sapesse fare dovete prendere i numeri in imput da linea di comando
+
+\section*{La guardia}
+Risolto l’indovinello, Lele e Frate Gab raggiunsero finalmente le imponenti mura della città.
+Quando arrivarono di fronte al grande portone di quercia scura, una guardia li fermò con un gesto brusco.
+
+«Fermi lì. Per uscire da queste mura non basta il desiderio di viaggiare,» disse con tono severo.\\
+«Serve dimostrare abilità e logica. Altrimenti, nessuno passa.»
+La guardia si piazzò davanti al portone, incrociando le braccia.
+
+«Vi darò una lista di numeri, alcuni positivi e altri negativi. Il vostro compito è questo:
+trovare la somma più alta ottenibile scegliendo solo numeri consecutivi all’interno della lista.»\\
+Fece un sorriso appena accennato, come se già pregustasse il fallimento dei due viaggiatori.\\
+Quando i due conclusero, la guardia controllò il risultato e annuì.
+
+«Avete risolto la prova… ma non potete comunque lasciare la città.
+Serve un permesso del Consiglio. Ordini.»
+
+\section*{Le mura}
+Lele e Gab, delusi, si prepararono a tornare indietro.
+Fu allora che una voce bassa arrivò da un vicolo vicino:
+
+«Non prendetevela. Quella guardia non fa altro che ripetere le regole.»\\
+Dal muro alle loro spalle si staccò una figura agile, con un mantello chiaro e uno zaino da viaggio.
+
+«Il mio nome è Daniele, esploratore e cartografo.»
+
+«Se davvero volete uscire,» disse abbassando la voce, «esiste un modo.»\\
+Daniele aprì lentamente una mappa sgualcita: una pianta intricata delle mura.\\
+Tra i bastioni, i corridoi e le fondamenta, si vedevano sottili passaggi secondari, non riportati nelle mappe ufficiali, né conosciuti dalle guardie.
+
+«Questa è la mappa dei passaggi segreti. Non è perfetta… molte parti sono consumate. Per questo serve ingegno.»
+
+Dovete creare un programma che data una mappa di dimensione NxN contenete degli 0 (Passaggio) e degli 1 (Muro) restituisca se, partendo dalla loro posizione di partenza (la cella (0,0)), si può raggiungere o meno la libertà (la cella (N,N)). Ci si può muovere in verticale ed in orizzontale, ma non in diagonale\\
+Nel caso in cui sia possibile raggiungere la libertà stapate un possibile passaggio per i futuri avventurieri.
+
+\noindent\rule{\linewidth}{0.4pt}
+\section*{Esercizi aggiuntivi}
+Se avete già finito e volete qualche esercizio in più chiedete al Tutor, così potete provare a testare il vostro livello.
+
+\end{document}
