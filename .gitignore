@@ -3,6 +3,8 @@ TracciaPrimoTutorato/
 TracciaColloquioWF/
 Idee/
 auto/
+.vscode/
+.github/
 *.aux
 *.bcf
 *.log

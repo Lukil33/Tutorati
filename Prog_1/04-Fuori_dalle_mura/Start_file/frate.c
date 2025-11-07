@@ -2,7 +2,7 @@
 
 /*
     Esempio per chi non ha compreso:
-    dati i numeri: 2025e 101
+    dati i numeri: 2025 e 101
 
     le corrispettive rappresentazioni binarie sono:
     2025=11111101001
