@@ -1,0 +1,104 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{amsmath}
+
+\makeatletter
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+\newcommand{\@subtitle}{}
+\pretitle{
+  \begin{center}
+  \LARGE
+}
+\posttitle{
+  \par\vskip0.5em
+  \large\@subtitle
+  \end{center}
+}
+\makeatother
+
+\title{Tutorato 05}
+\subtitle{L4 pr473r14}
+\author{Prigione Luca}
+\date{13/11/XXXX}
+
+\begin{document}
+\pagestyle{empty}
+
+\maketitle
+
+\section*{Parole distorte}
+Superate finalmente le mura, Lele, Frate Gab e Daniele imboccarono la strada che si allontanava dalla città, il mondo oltre le mura sembrava più vasto di quanto avessero mai immaginato.\\
+Dopo qualche ora di cammino, Daniele si fermò all’incrocio di un sentiero.
+
+«Da qui le nostre strade si dividono,» disse, osservando l’orizzonte.
+
+«Devo continuare verso nord, verso le montagne. Voi proseguite a ovest, verso la pianura.»\\
+Lele lo salutò con rispetto, mentre Frate Gab mormorò una benedizione.\\
+Proseguendo il viaggio, i due si imbatterono in una grande pietra, coperta a metà dal muschio e dall'erba alta.
+Sulla superficie, incisi con cura, si distinguevano strani simboli, un intreccio di lettere e numeri.
+Frate Gab si chinò per osservarla meglio.
+
+«Pare un messaggio antico… ma alcuni caratteri non sono corretti. Forse quei numeri celano lettere dimenticate.»
+
+Scrivete un programma che, data una sequenza di caratteri (lettere e numeri) memorizzata in un array, ricostruisca ricorsivamente la sequenza sostituendo ogni numero con la lettera più simile.\\
+P.S.: Per chi ha fatto la lettura da linea di comando, deve richiedere l'array da lì.
+
+\section*{Le due sorelle}
+Superata la pietra incisa, Lele e Frate Gab proseguirono lungo la strada sterrata, finché il paesaggio cambiò:
+davanti a loro si apriva una distesa di mais dorato, che ondeggiava al vento come un mare luminoso.
+Camminarono per un tratto, finché risate leggere ruppero il silenzio.
+Tra le spighe, due bambine giocavano lanciandosi dei sassolini numerati e spostandoli in modo curioso.
+
+«Mi chiamo Giad,» disse la più grande, con un sorriso furbo.
+
+«E io sono Ale!» aggiunse l’altra, saltellando.
+
+«Questo è il nostro gioco segreto. Volete provarci anche voi?»\\
+Lele esitò, ma Frate Gab fece un passo avanti.
+
+«Perché no? Ci piacciono le sfide.»\\
+Dovete creare un programma che, data una sequenza di numeri memorizzata in un array, elimini in modo ricorsivo tutti i numeri il quale valore è maggiore o uguale alla somma di tutti i successivi valori validi.\\
+P.S.: Un numero viene considerato valido solo se non è stato eliminato in precedenza.\\
+P.P.S.: Tutti i numeri sono $\geq$ 0.
+
+\section*{Ancora numeri binari???}
+Risolto l’enigma delle sorelle, Lele e Frate Gab sorrisero soddisfatti.
+
+«Siete state brave» disse il frate con tono bonario, «ma ora tocca a me proporre un gioco.
+È un piccolo indovinello che i monaci del mio convento amavano risolvere durante le sere d’inverno.»\\
+Le due sorelle si sporgono, incuriosite.
+«Un altro gioco? Quale?» chiese Giad.\\
+Frate Gab prese un bastoncino e disegnò due file di cifre sulla terra.
+«Riuscireste a sommare due numeri binari… in modo ricorsivo?»\\
+Le bambine si guardarono perplesse, mentre Ale sussurrò: «Binari? Come quelli del treno?»\\
+Lele rise piano. «No, piccole. Questa volta si parla di numeri.»
+
+Dovete scrivere un programma che, dati due numeri binari memorizzati in due array, ne calcoli la somma memorizzandola in un terzo array, il tutto in modo ricorsivo.
+P.S.: I numeri binari sono memorizzati in ordine inverso, cioè la cifra meno significativa è all'inizio dell'array.
+P.P.S.: Per chi ha fatto la lettura da linea di comando, deve richiedere l'array da lì.
+
+\section*{La spirale di grano}
+Dopo aver spiegato alle sorelle come risolvere l’enigma dei numeri binari, Lele e Frate Gab ripresero il cammino.
+Procedevano in silenzio, quando Lele si fermò di colpo.
+
+«Frate… guarda laggiù.»\\
+Nel mezzo della distesa dorata, il grano sembrava piegato in modo innaturale, formando una spirale perfetta.
+Frate Gab socchiuse gli occhi.
+
+«Non è opera del caso. Qualcuno ha voluto lasciare un segno… un percorso da seguire.»\\
+Lele si chinò, tracciando il disegno con il dito.
+
+Immagina una griglia NxN in cui ogni casella contiene un numero. La casella in alto a sinistra contiene sempre 1 e, procedendo a spirale in senso orario a partire da quella, ogni casella conterrà il numero naturale successivo.\\
+Il tuo compito è quello di scoprire data in input la dimensione della matrice e data una colonna n quant'è la somma dei numeri presenti all'interno di quella colonna.\\
+P.S.: L'esercizio è molto difficile, quindi non preoccupatevi se non riuscite a risolverlo in modo ricorsivo.
+
+\noindent\rule{\linewidth}{0.4pt}
+\section*{Esercizi aggiuntivi}
+Se avete già finito e volete qualche esercizio in più chiedete al Tutor, così potete provare a testare il vostro livello.
+
+\end{document}
