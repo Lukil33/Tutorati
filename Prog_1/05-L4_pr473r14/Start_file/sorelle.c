@@ -18,6 +18,6 @@
     risultato atteso: {10,0,3,0,22,14,0,5,10}
 */
 
-int main() {
+int main(){
     return 0;
 }
