@@ -1,7 +1,7 @@
-che
-palle
-scrivere
-questi
-testi
-degli
-esercizi
+che.txt
+palle.txt
+scrivere.txt
+questi.txt
+testi.txt
+degli.txt
+esercizi.txt
