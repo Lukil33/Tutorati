@@ -16,7 +16,7 @@
 }
 \posttitle{
   \par\vskip0.5em
-  \large\@subtitle
+  \large\@subtitle{}
   \end{center}
 }
 \makeatother
@@ -99,10 +99,10 @@ Livia, ancora rossa per la sconfitta, borbottò:
 Lele corse verso il vicolo. Fad rideva alla sua bancarella, muovendo rapidamente le carte. Senza esitazione, Lele si preparò alla sfida.\\
 Per affrontare il Gioco delle Tre Carte e battere dunque il mercante dovrete implementare alcune funzioni:
 \begin{itemize}
-    \item Swap: scambia due carte passate per puntatore senza variabili di supporto. \begin{equation*}void Swap(char* carta\_uno, char* carta\_due)\end{equation*}
-    \item Move: dato lo stato delle carte e un numero casuale, esegue uno swap e verifica l'esito. \begin{equation*}void Move(char\& carta\_destra, char\& carta\_centrale, char\& carta\_sinistra)\end{equation*}
-    \item Round: esegue più Move e chiede di indovinare la posizione della regina. \begin{equation*}bool Round()\end{equation*}
-    \item Game: gestisce più round e calcola quante volte si ha vinto. \begin{equation*}int Game(int numero\_round)\end{equation*}
+    \item Swap: scambia due carte passate per puntatore senza variabili di supporto.\begin{equation*}void Swap(char* carta\_uno, char* carta\_due)\end{equation*}
+    \item Move: dato lo stato delle carte e un numero casuale, esegue uno swap e verifica l'esito.\begin{equation*}void Move(char\& carta\_destra, char\& carta\_centrale, char\& carta\_sinistra)\end{equation*}
+    \item Round: esegue più Move e chiede di indovinare la posizione della regina.\begin{equation*}bool Round()\end{equation*}
+    \item Game: gestisce più round e calcola quante volte si ha vinto.\begin{equation*}int Game(int numero\_round)\end{equation*}
 \end{itemize}
 P.S.: Per rappresentare le carte potete utilizzare il carattere `Q' per la carta vincente e `8' per le carte perdenti\\
 P.P.S.: Il numero di partite che si vuole fare lo si può prendere in input

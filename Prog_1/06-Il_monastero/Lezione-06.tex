@@ -1,0 +1,133 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{amsmath}
+
+\makeatletter
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+\newcommand{\@subtitle}{}
+\pretitle{
+  \begin{center}
+  \LARGE
+}
+\posttitle{
+  \par\vskip0.5em
+  \large\@subtitle{}
+  \end{center}
+}
+\makeatother
+
+\title{Tutorato 06}
+\subtitle{Il monastero}
+\author{Prigione Luca}
+\date{20/11/XXXX}
+
+\begin{document}
+\pagestyle{empty}
+
+\maketitle
+
+\section*{Il Monastero del nido}
+Il sentiero si arrampicava sulle colline finché, tra gli alberi, apparve il Monastero del Nido: una costruzione chiara, raccolta e silenziosa come un rifugio d’aquila.
+Appena arrivati al portone, questo si aprì di scatto.
+
+«Gab! Finalmente!»\\
+Un frate snello e sorridente li accolse con un abbraccio.
+
+«Benvenuto, straniero. Io sono Frate Ballocco, colui che gestisce il monastero.
+Prima di entrare, però, dovrò sottoporti alla prova degli apprendisti.»\\
+Lele si irrigidì.
+
+«Una prova?»\\
+Ballocco annuì con aria soddisfatta.\\
+Dovrai creare una struct che rappresenti un monaco, con i seguenti campi:
+\begin{itemize}
+    \item Nome
+    \item Età
+    \item Mansione
+    \item Anni di esperienza
+\end{itemize}
+Successivamente dovrai permettere di eseguire le segunti operazioni:
+\begin{enumerate}
+    \item Creare un array di N monaci con valori a piacere
+    \item Scrivere una funzione che stampi i dati di tutti i monaci
+    \item Scrivere una funzione che ordini i monaci in base agli anni di esperienza 
+\end{enumerate}
+P.S.: La funzione per ordinare deve funzionare da toggle, cioè se i monaci sono ordinati in ordine crescente deve ordinare in ordine decrescente e viceversa.
+
+\section*{Il passo iTAGLIco}
+Entrati nel monastero, Frate Ballocco condusse Lele e Frate Gab in una piccola sala piena di volumi antichi.
+
+«Questi sono dei testi scritti in iTAGLIano,» spiegò. «Una lingua curiosa: tutte le parole scritte \textbf{interamente} in maiuscolo sono… al contrario. Per leggerle serve invertirle.»\\
+Ballocco posò un manoscritto sul tavolo.
+
+«Hai mostrato un buon occhio. Ti andrebbe di aiutarci con una traduzione?»\\
+Frate Ballocco chiuse il volume con un tonfo leggero.
+
+«Se riuscirai a farlo,» disse, «le porte della nostra biblioteca saranno aperte per te quanto vorrai.»\\
+Lele annuì, pronto a mettersi al lavoro tra i silenzi antichi del Monastero del Nido.
+Scrivete un programma che:
+\begin{itemize}
+    \item Legga da linea di comando il nome dei file necessari.
+    \item Legga il file passato a riga di comando parola per parola.
+    \item Modifichi il testo trasformandolo in italiano.
+    \item Riscriva il testo tradotto all'interno del file passato a riga di comando.
+\end{itemize}
+P.S.: Se non sapete leggere da riga di comando potete chiamare i file input.txt e output.txt
+
+\section*{La biblioteca interrata}
+Frate Ballocco, impressionato dall’abilità di Lele, lo condusse lungo una scala a chiocciola che scendeva sotto il monastero.
+
+«Qui conserviamo ciò che non deve andare perduto,» spiegò mentre la torcia proiettava ombre sulle pareti.
+
+«Tuffu!» chiamò Ballocco. «Ho qualcuno che potrà aiutarti.»\\
+La giovane amanuense si voltò di scatto. Aveva gli occhi svegli, le mani macchiate d’inchiostro e un mucchio di fogli sotto il braccio.
+
+«Tu devi essere Lele,» disse subito, come se lo stesse aspettando. «Ho già sentito parlare delle tue capacità.
+Perfetto! Allora puoi aiutarmi a catalogare questi libri… prima che mi crollino tutti addosso.»\\
+Lele guardò la montagna di tomi e sorrise debolmente.
+Dovrai scrivere un programma che:
+\begin{enumerate}
+    \item Legga da un file di testo una lista di libri, uno per riga.
+    \item Per ogni libro dovrà leggere il file ``nome\_libro.txt'' per ottenere maggiori informazioni
+    \item Dopodichè bisognerà creare una struct libro che contiene:
+    \begin{itemize}
+        \item Nome
+        \item Autore
+        \item Anno di pubblicazione
+        \item Numero di caratteri (Spazi esclusi)
+    \end{itemize}
+    \item Infine bisognerà stampare a schermo la lista dei libri
+\end{enumerate}
+P.S.: Se non sapete leggere da riga di comando potete chiamare il file input.txt
+
+\section*{Il testo Nascosto}
+Dopo ore passate ad aiutare Tuffu a rimettere ordine tra registri, pergamene e tomi dimenticati, l’amanuense si fermò finalmente… e sorrise.
+
+«Lele, senza di te sarei ancora sommersa fino al collo, per ringraziarti voglio mostrarti qualcosa che nessuno ha il permesso di leggere.»\\
+Da uno scaffale nascosto estrasse un volume pesante con il titolo inciso a mano:
+\begin{center}
+    “Deficienza Artificiale” \- M.Romberi
+\end{center}
+«È il libro più importante che possiedo,» disse Tuffu con voce bassa.\\
+«Un testo enigmatico che parla di un tesoro perduto… ma è scritto talmente male che nessuno è mai riuscito a decifrarlo del tutto.»\\
+Gli porse il tomo.
+
+«Se davvero vuoi provarci, ti affido un compito degno della tua fama.»
+Per decifrarlo ti posso dare i seguenti suggerimenti:
+\begin{enumerate}
+    \item Oltre al testo.txt ci sono anche due fogli: parole\_criptate.txt, parole\_decriptate.txt.
+    \item Ogni parola i presente sul foglio parole\_criptate.txt deve essere tradotta con la parola i presente sul foglio parole\_decriptate.txt.
+    \item Il testo è case sensitive, quindi Bolla, BOlla e bolla sono parole differenti.
+    \item Devi stare infine attento perchè il testo potrebbe necessitare di essere tradotto più volte.
+\end{enumerate}
+
+\noindent\rule{\linewidth}{0.4pt}
+\section*{Esercizi aggiuntivi}
+Se avete già finito e volete qualche esercizio in più chiedete al Tutor, così potete provare a testare il vostro livello.
+
+\end{document}
