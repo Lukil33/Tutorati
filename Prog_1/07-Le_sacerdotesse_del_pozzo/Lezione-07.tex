@@ -1,0 +1,119 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{amsmath}
+
+\makeatletter
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+\newcommand{\@subtitle}{}
+\pretitle{
+  \begin{center}
+  \LARGE
+}
+\posttitle{
+  \par\vskip0.5em
+  \large\@subtitle{}
+  \end{center}
+}
+\makeatother
+
+\title{Tutorato 07}
+\subtitle{Le sacerdotesse del pozzo}
+\author{Prigione Luca}
+\date{27/11/XXXX}
+
+\begin{document}
+\pagestyle{empty}
+
+\maketitle
+
+\section*{Le sacerdotesse}
+Dopo aver chiuso il libro di M. Roberi, Tuffu guidò Lele fuori dal monastero fino a un piccolo santuario costruito attorno a un pozzo antico.\\
+Prima ancora di arrivare, si sentirono due voci discutere animatamente.
+
+«Sprechi spazio inutilmente!»
+
+«E tu lo lasci collassare!»\\
+Tuffu sospirò.\\
+Tuffu gli rivolse un sorriso rassegnato.
+
+«Credo che tu sia l’unico in grado di sistemare la questione.»\\
+Dovete creare un programma per gestire il pozzo implemendo un vettore dinamico di interi.\\
+Ogni volta che da input viene inserito un numero, controllate se è già presente nel vettore: se sì, la dimensione va decrementata dinamicamente; altrimenti va aumentata.\\
+Fate però attenzione ai casi limite:\\
+Se il pozzo è in secca (0 elementi) oppure sta straripando (10 elementi), stampate il contenuto del pozzo e terminate il programma.
+
+\section*{Un messaggio dal pozzo}
+Risolta la disputa tra Alice e Maria, il pozzo tornò silenzioso.
+Tuffu si schiarì la voce.
+
+«Non è ancora finita, Lele. Il santuario custodisce anche un messaggio… ma nessuno è mai riuscito a leggerlo per intero.»\\
+Dal muro emerse una piccola nicchia con un rotolo polveroso.
+
+«Il testo è frammentato» spiegò Tuffu.
+
+«Ogni riga è sparsa in un file diverso. Per decifrarlo serve ordine… e memoria.»\\
+Riceverete i seguenti file passati attraverso riga di comando:
+\begin{enumerate}
+    \item riceverete il numero di righe e successivamente due numeri per riga:
+    \begin{itemize}
+        \item il primo numero della riga indica la posizione all'interno del messaggio finale
+        \item il secondo numero della riga indica il numero di parole contenute in quella parte di messaggio
+    \end{itemize}
+    \item riceverete un testo unico contenenti tutte le parti del messaggio in ordine contiguo e date le informazioni precedenti dovrete ricomporre il messaggio.
+\end{enumerate}
+
+\section*{La camera dei segreti}
+Quando il santuario finalmente si aprì, una corrente d’aria gelida attraversò la stanza.
+Una scala scendeva ancora più in profondità.\\
+Tuffu abbassò la voce.
+
+«Qui sotto si trova la Camera dei Segreti. Ogni parola viene trasformata… e mai restituita uguale.»\\
+Lele si calò al suo interno.
+Al centro, un leggio custodiva un altro file avvolto nella polvere.
+
+«Questa volta» disse Tuffu, «non basta leggere.Il testo cambia da solo, parola dopo parola. Serve qualcuno capace di sistemarlo… ricorsivamente.»\\
+Scrivete un programma che legga da file di testo una stringa ben formata (ovvero con \texttt{\textbackslash0} finale).
+Salvate la stringa all'interno di un vettore allocato dinamicamente e successivamente applicatevi la seguente funzione ricorsiva:
+\begin{center}
+char* \textbf{Funzione\_Ricorsiva} (\textit{stringa}, \textit{posizione})
+\end{center}
+La funzione deve restituire una nuova stringa (ben formata) contenente i caratteri '@' estratti dalla stringa originale.\\
+P.S.: La dimensione della stringa originale è passata come primo argomento all'interno del file di testo.\\
+P.P.S.: Questo è il testo di un es 2 di vecchio esame del Dr.Roveri. 
+
+\section*{L’addestramento}
+Terminata la prova del santuario, Lele risalì finalmente dal pozzo.
+Ad attenderlo c’era Frate Ballocco, questa volta con un’espressione più pragmatica che solenne.
+
+«Hai fatto progressi notevoli» disse, «ma non sei ancora pronto.
+Per affrontare ciò che ti aspetta dovrai imparare a gestire due tecniche fondamentali: ciò che si conserva in cima e ciò che scorre verso il fondo.»\\
+Frate Gab annuì.
+
+«Niente misteri questa volta. Solo addestramento.»\\
+Implementare un programma che:
+\begin{enumerate}
+    \item Gestisca una pila (stack) usando un vettore dinamico di interi
+    \begin{itemize}
+        \item implementa operazioni: push, pop, isEmpty
+        \item aumentare la capacità quando pieno
+        \item pop deve restituire l’elemento rimosso
+    \end{itemize}
+    \item Gestisca una coda (queue) usando un vettore dinamico di interi
+    \begin{itemize}
+        \item implementa operazioni: enqueue, dequeue, isEmpty
+        \item aumentare la capacità quando pieno
+        \item dequeue deve restituire l’elemento rimosso
+    \end{itemize}
+\end{enumerate}
+P.S.: Se vi sentite proprio coraggiosi potete pensare di implementare il tutto utilizzando le Struct
+
+\noindent\rule{\linewidth}{0.4pt}
+\section*{Esercizi aggiuntivi}
+Se avete già finito e volete qualche esercizio in più chiedete al Tutor, così potete provare a testare il vostro livello.
+
+\end{document}
