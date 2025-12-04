@@ -1,0 +1,90 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{amsmath}
+
+\makeatletter
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+\newcommand{\@subtitle}{}
+\pretitle{
+  \begin{center}
+  \LARGE
+}
+\posttitle{
+  \par\vskip0.5em
+  \large\@subtitle{}
+  \end{center}
+}
+\makeatother
+
+\title{Tutorato 08}
+\subtitle{Boss fight}
+\author{Prigione Luca}
+\date{04/12/XXXX}
+
+\begin{document}
+\pagestyle{empty}
+
+\maketitle
+
+\section*{Compleanni}
+Dopo giorni di prove, allenamenti e rivelazioni, Lele raggiunse finalmente il sentiero che conduceva al castello dove, secondo ogni leggenda, viveva l’entità più temuta del regno digitale: il Boss.
+La fortezza era enorme e silenziosa. Gab, Ballocco e Tuffu lo avevano aiutato fino a quel momento, ma decisero di non avventurarsi oltre il ponte levatoio.\\
+Tuffu annuì, seria:
+
+«Ricorda: prima di affrontarlo dovrai dimostrare di saper controllare le costruzioni più complesse. Il castello riconosce solo chi sa dare forma ai dati.»\\
+Per riuscire a farvi accettare dal castello e poichè Lele è un cavaliere gentile, decidete di costruire un calendario utilizzando delle liste in modo da segnarvi le date di compleanno dei personaggi che avete incontrato lungo il percorso.\\
+Dovrete quindi implementare una funzione \texttt{crea\_calendario}, una funzione \texttt{add\_compleanno}, una funzione \texttt{stampa\_calendario} e una funzione \texttt{elimina\_calendario} affinché il calendario funzioni correttamente.
+
+\section*{La sala del trono}
+Il salone era immenso. Lampadari di cristallo fluttuavano sopra il vuoto, e in fondo, su un trono spezzato, sedeva un gigante d’ombra e luce: il Boss.\\
+Non aveva titolo, non aveva identità: era semplicemente il Boss.\\
+Guardiano dei dati, distruttore delle strutture mal progettate.
+
+«Sei arrivato fin qui…» rimbombò la sua voce.
+
+«Mostrami se meriti di ristrutturare questo mondo.»\\
+Il colosso si alzò, e il suo corpo si divise in tre forme, ognuna rivelatrice di un aspetto del caos delle liste.
+
+\section*{La forma disordinata}
+La prima forma era puro caos: elementi sparsi, ripetuti, privi di ordine e logica.\\
+Per riuscire a sconfiggerla, dovete creare un programma che gestisca una lista non ordinata.
+Per farla funzionare, dovrete implementare le seguenti funzioni:
+\begin{itemize}
+    \item \texttt{inserisci (lista, valore)}: inserisce un nuovo nodo con il valore specificato in testa alla lista.
+    \item \texttt{rimuovi\_duplicati (lista)}: rimuove tutti i valori all'interno della lista che sono duplicati.
+    \item \texttt{stampa\_lista (lista)}: stampa tutti i valori presenti nella lista.
+\end{itemize}
+
+\section*{La forma specchiata}
+La seconda forma si componeva di specchi. Ogni suo movimento generava una copia riflessa che si muoveva al contrario, come se la realtà stessa oscillasse tra due direzioni opposte.\\
+Per superarla, dovete creare un programma che gestisca una lista doppiamente concatenata di numeri. Per farla funzionare, dovrete implementare le seguenti funzioni:
+\begin{itemize}
+    \item \texttt{inserisci\_in\_posizione (lista, posizione, valore)}: inserisce un nuovo nodo con il valore specificato nella posizione corretta.
+    \item \texttt{rimuovi\_in\_posizione (lista, posizione)}: rimuove il nodo alla posizione corretta.
+    \item \texttt{rimuovi\_valore (lista, valore)}: rimuove il primo nodo che contiene il valore specificato dalla lista.
+    \item \texttt{stampa\_lista (lista)}: stampa tutti i valori presenti nella lista in entrambi i versi.
+\end{itemize}
+
+\section*{La forma finale}
+La terza forma era un anello di energia: un ciclo infinito, senza inizio né fine.
+
+«VEDIAMO SE PUOI INTERROMPERE L’ETERNO…»\\
+Per sconfiggere definitivamente il Boss, dovete scrivere un programma che costruisca una lista circolare di interi, implementando le seguenti funzioni ricorsive:
+\begin{itemize}
+    \item \texttt{inserisci (lista, posizione)}: inserisce al fondo un nuovo nodo con il valore specificato.
+    \item \texttt{lunghezza (lista)}: percorre la lista e calcola il numero di nodi presenti.
+    \item \texttt{remove\_max (lista)}: rimuove il nodo contenente il valore massimo, mantenendo la circolarità.
+    \item \texttt{stampa (lista)}: stampa tutti i valori presenti nella lista, partendo dal nodo iniziale e tornando al nodo iniziale.
+\end{itemize}
+P.S.: Se non avete utilizzato le liste circolari in precedenza, potete pensare di utilizzare gli array circolari.
+
+\noindent\rule{\linewidth}{0.4pt}
+\section*{Esercizi aggiuntivi}
+Se avete già finito e volete qualche esercizio in più chiedete al Tutor, così potete provare a testare il vostro livello.
+
+\end{document}
