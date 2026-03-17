@@ -1,0 +1,113 @@
+\setlength{\parskip}{0pt}
+\titlespacing*{\subparagraph}{1em}{0em}{0em} 
+
+\thispagestyle{chapterInit}
+\section*{Il camion di banane}
+    \paragraph{Definizione} Siamo i possessori di un grosso camion di banane, il nostro obiettivo è quello di riempire al massimo il nostro camion. Le banane occupano ogniuna un quantitativo di spazio che dipende dalla loro qualità, più sono buone più spazio occupano.
+    \paragraph{Obiettivo} Capire quanto spazio rimane se riempiamo il camion nel migliore dei modi.
+    \paragraph{Spunto} Cosa cambierebbe se volessimo tenere conto anche della qualità delle banane?
+    \paragraph{Esempio} Date la seguente tabella contenente la qualità delle banane definire quanto spazio rimane nel camion se lo riempiamo al meglio. \\
+    Spazio totale del camion: 200 unità di spazio.
+
+    \begin{table}[h!]
+        \centering
+        \caption{Qualità delle banane}
+        \label{tab:qualita_banane}
+        \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+            20 & 85 & 60 & 50 & 35 & 60 & 34\\ \hline
+        \end{tabular}
+    \end{table}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{La grappa di Alex}
+    \paragraph{Definizione} La grappa di Alex è una bevanda alcolica che viene creata seguendo un rituale molto speciale. Ogni volta che infatti si decide di raccogliere una pianta di uva per produrre la grappa, le piante vicine perdono la metà della loro quantità di uva.
+    \paragraph{Obiettivo} L'obiettivo di Alex è quello di produrre la quantità massima di grappa possibile.
+    \paragraph{Spunto} Cosa cambierebbe se al posto di dimezzare la quantità di uva delle piante vicine, queste perdessero tutta la loro uva?
+    \paragraph{Esempio} Data la seguente piantagione di uva, qual'è la quantità massima di grappa che Alex può produrre?
+
+    \begin{table}[h!]
+        \centering
+        \caption{Quantità di uva presente in ogni pianta espressa in grammi/KiloNewton}
+        \label{tab:costi_voli}
+        \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+            20 & 85 & 60 & 50 & 35 & 60 & 34\\ \hline
+        \end{tabular}
+    \end{table}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Il problema del commesso viaggiatore}
+    \paragraph{Definizione} Un viaggiatore vuole fare il maggior numero di vacanze possibili per farsi figo con gli amici, ha però un budget molto limitato. Una vacanza è definita da un viaggio di andata e un viaggio di ritorno tra Pinerolo e la città di destinazione. Inoltre tutti i biglietti devono essere acquistati in anticipo, non è possibile acquistare biglietti di sola andata e non è carino mandare il nostro viaggiatore più volte nella stessa città.
+    \paragraph{Obiettivo} Trovare il numero massimo di vacanze che il viaggiatore può fare con il suo budget limitato.
+    \paragraph{Spunto} Cosa cambierebbe se il viaggiatore è disposto a viaggiare nelle stesse città? E se qualche vacanza fosse considerabile migliore delle altre? qualche suo amico lo prenderà in giro per aver visitato Lonigo?
+    \paragraph{Esempio} Dato un budget di 200 EUR quante vacanze può fare il nostro viaggiatore?
+
+    \begin{table}[h!]
+        \centering
+        \caption{Costi dei voli di andata espressi in EUR}
+        \label{tab:costi_voli}
+        \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+            \textbf{Destinazione} & \textbf{Montebelluna} & \textbf{Tel Aviv} & \textbf{Lonigo} & \textbf{Bussoleno} & \textbf{Bassano} \\ \hline
+            \textbf{costi} & 85 & 310 & 50 & 35 & 60 \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \begin{table}[h!]
+        \centering
+        \caption{Costi dei voli di andata espressi in Lire Turche (valore di scambio 1 EUR = 50 LT)}
+        \label{tab:costi_voli}
+        \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+            \textbf{Destinazione} & \textbf{Montebelluna} & \textbf{Tel Aviv} & \textbf{Lonigo} & \textbf{Bussoleno} & \textbf{Bassano} \\ \hline
+            \textbf{costi} & 260 & 350 & 600 & 700 & 300 \\ \hline
+        \end{tabular}
+    \end{table}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Lega dei lezzi}
+    \paragraph{Definizione} Il tuo gruppo di amici oramai è diventato ossessionato con questo videogioco ``League of Lezzos'' e vogliono che tu componga il miglior team possibile per scalare le classifiche. Ogni team si compone di 5 giocatori ogniuno di un ruolo diverso. Ogni giocatore possiede un punteggio in puzza ed un ruolo, inoltre alcuni di questi giocatori hanno anche una lista di amici con i quali vogliono giocare. 
+    \paragraph{Obiettivo} Trovare il team più puzzone per poter vincere tutte le partite.
+    \paragraph{Spunto} Cosa cambierebbe se i giocatori non fossero più legati ad un singolo ruolo ma avessero punteggi diversi per ogni ruolo? e se aggiungessimo una lista di giocatori che non vanno d'accordo tra di loro?
+    \paragraph{Esempio} Date le seguenti tabelle contenenti i punteggi, i ruoli e le amicizie tra i giocatori, qual'è il team più puzzone che si può formare?
+
+    \begin{table}[h!]
+        \centering
+        \caption{Punteggi dei giocatori}
+        \label{tab:punteggi_giocatori}
+        \begin{tabular}{|l|c|c|}
+        \hline
+            \textbf{Giocatore} & \textbf{Puzza} & \textbf{Ruolo} \\ \hline
+            \textbf{Alex} & 85 & TOP \\ \hline
+            \textbf{Freaky} & 69 & ADC \\ \hline
+            \textbf{Tricker} & 50 & SUPP \\ \hline
+            \textbf{Matta} & 5 & ADC \\ \hline
+            \textbf{Boss} & 67 & MID \\ \hline
+            \textbf{Luca} & 96 & TOP \\ \hline
+            \textbf{Rovigo} & 11 & JNG \\ \hline
+            \textbf{Gabriele} & 50 & SUPP \\ \hline
+            \textbf{Rossi} & 102 & MID \\ \hline
+            \textbf{Biagio} & 60 & JNG \\ \hline
+            \textbf{Negri} & 39 & SUPP \\ \hline
+            \textbf{Alberto} & 32 & ADC \\ \hline
+            \textbf{Giorgio} & 83 & SUPP \\ \hline
+            \textbf{Francesco} & 35 & TOP \\ \hline
+            \textbf{Matteo} & 74 & JNG \\ \hline
+        \end{tabular}
+    \end{table}
+
+    Amicizie: \\
+    Luca $\rightarrow$ Alex, Boss, Giorgio \\
+    Alex $\rightarrow$ Luca, Boss \\
+    Boss $\rightarrow$ Alex \\
+    Giorgio $\rightarrow$ Francesco \\
+    Tricker $\rightarrow$ Gabriele \\
+    Gabriele $\rightarrow$ Tricker \\
+    Negri $\rightarrow$ Alberto \\
+    Alberto $\rightarrow$ Negri \\
+    Francesco $\rightarrow$ Matteo \\
+    Matteo $\rightarrow$ Francesco \\
