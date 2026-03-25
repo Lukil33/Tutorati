@@ -1,0 +1,121 @@
+\setlength{\parskip}{0pt}
+\titlespacing*{\subparagraph}{1em}{0em}{0em} 
+
+\thispagestyle{chapterInit}
+\section*{Inserimento minimo per un palindromo}
+    \paragraph{Input} Una stringa di N caratteri S.
+    \paragraph{Obiettivo} Trovate il numero minimo di caratteri da inserire per renderla palindroma.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: ``palla''
+        \newline
+        \textbf{Output}: 1
+        \newline
+        \textbf{Spiegazione}: inserendo la lettera ``p'' alla fine della parola si ottiene: ``pallap'' che è palindroma.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: ``scalare''
+        \newline
+        \textbf{Output}: 4
+        \newline
+        \textbf{Spiegazione}: inserendo le lettere ``cs'' alla fine della parola e le lettere ``er'' in posizione 2 si ottiene la parola: ``sceralarecs'' che è palindroma.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: ``tettet''
+        \newline
+        \textbf{Output}: 0
+        \newline
+        \textbf{Spiegazione}: la parola è già palindroma quindi non bisogna eseguire alcuna modifica.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Post referendum}
+    \paragraph{Input} 3 interi S, N, A che rappresentano il numero di persone che votano SI, NO e che si astengono al referendum.
+    \paragraph{Obiettivo} Voi dovete contare in quanti modi si possono piazzare le persone in fila in modo che le persone con lo stesso voto NON siano adiacenti.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: S = 1, N = 1, A = 0
+        \newline
+        \textbf{Output}: 2
+        \newline
+        \textbf{Spiegazione}: Le uniche possibili disposizioni sono: SI NO e NO SI.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: S = 1, N = 1, A = 1
+        \newline
+        \textbf{Output}: 6
+        \newline
+        \textbf{Spiegazione}: Le possibili disposizioni sono: S N A, S A N, A S N, N S A, N A S, A N S.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: S = 2, N = 1, A = 1
+        \newline
+        \textbf{Output}: 12
+        \newline
+        \textbf{Spiegazione}: Le possibili disposizioni sono tante e quindi non ve le mostrerò tutte perchè sono pigro, però sono effettivamente 12.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Partizionamento Palindromo}
+    \paragraph{Input} Una stringa di N caratteri S.
+    \paragraph{Obiettivo} Trovare il minimo numero di sottostringhe palindrome (chiamate anche partizioni palindrome) che compongono la stringa di partenza S.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: palle
+        \newline
+        \textbf{Output}: 4
+        \newline
+        \textbf{Spiegazione}: Le partizioni minime sono: ``p'', ``a'', ``ll'', ``e''.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: hebellahosahehaidetto
+        \newline
+        \textbf{Output}: 13
+        \newline
+        \textbf{Spiegazione}: Il partizionamento diventa: ``h'', ``ebe'',``ll'',``a'',``h'',``o'',``s'',``aheha'',``i'',``d'',``e'',``tt'', ``o''.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: boffetti
+        \newline
+        \textbf{Output}: 6
+        \newline
+        \textbf{Spiegazione}: Qua non penso servano spiegazioni ma nel dubbio le metto: ``b'', ``o'', ``ff'', ``e'', ``tt'', ``i''.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Parentesizzazione booleana}
+    \paragraph{Input} Viene fornita un'espressione composta da variabili booleane e dagli operatori AND e OR.
+    \paragraph{Obiettivo} Bisogna trovare in quanti modi diversi possono essere posizionare le parentesi in modo che l'espressione risulti vera.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: T $\vee$ F $\wedge$ T
+        \newline
+        \textbf{Output}: 2
+        \newline
+        \textbf{Spiegazione}: Le uniche due disposizioni che rendono l'espressione vera sono: (T $\vee$ F) $\wedge$ T e T $\vee$ (F $\wedge$ T).
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: T $\vee$ F $\wedge$ F
+        \newline
+        \textbf{Output}: 1
+        \newline
+        \textbf{Spiegazione}: L' unica disposizione che rende l'espressione vera è: T $\vee$ (F $\wedge$ F).
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: F $\vee$ F $\wedge$ T
+        \newline
+        \textbf{Output}: 0
+        \newline
+        \textbf{Spiegazione}: Non ci sono disposizioni che rendono l'espressione vera.
+    \end{esempio}

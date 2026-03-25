@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage[framemethod=TikZ]{mdframed}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{cancel}
@@ -23,6 +24,13 @@
 \usepackage{xparse}
 \usepackage[acronym,toc,nomain]{glossaries}
 \usepackage{glossary-mcols}
+
+\newenvironment{esempio}{%
+    \begin{mdframed}[linecolor=gray, roundcorner=5pt, backgroundcolor=gray!10]%
+    \textbf{Esempio}\space%
+}{%
+    \end{mdframed}%
+}
 
 \setlength{\parskip}{0pt}
 \titlespacing*{\subparagraph}{1em}{0em}{0em} 
@@ -148,6 +156,6 @@
     \end{titlepage}
     
     \pagenumbering{arabic}
-    \include{Esercizi.tex}
+    \include{Esercizi-02.tex}
 
 \end{document}
