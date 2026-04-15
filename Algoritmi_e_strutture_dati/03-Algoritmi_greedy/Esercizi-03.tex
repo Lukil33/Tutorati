@@ -1,0 +1,144 @@
+\setlength{\parskip}{0pt}
+\titlespacing*{\subparagraph}{1em}{0em}{0em} 
+
+
+\thispagestyle{chapterInit}
+\section*{Esercizio per aumentare l'autostima prima che venga distrutta}
+    \paragraph{Input} Un'array costi[] di dimensione n ed un'intero k.
+    \paragraph{Obiettivo} All'interno del negozio c'è un'offerta molto strana, ogni volta che compri un'oggetto k elementi ti vengono regalati, il vostro obbiettivo è quello di minimizzare il costo totale per prendere tutti gli oggetti.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: costi[] = \{3, 2, 1, 4\}, k = 2
+        \newline
+        \textbf{Output}: 3
+        \newline
+        \textbf{Spiegazione}: Per trovare il costo minimo possiamo prendere gli oggetti di costo 1 e 2.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: costi[] = \{3, 2, 1, 4, 5\}, k = 4
+        \newline
+        \textbf{Output}: 1
+        \newline
+        \textbf{Spiegazione}: Ci basta comprare l'oggetto di costo 1 per poter prendere tutti gli altri.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Bambini ciccioni}
+    \paragraph{Input} Due array entrambi di dimensione n: Bambini[], Cookies[] che rappresentano il numero di biscotti che ogni bambino vuole e il numero di cookies presente in ogni sacchetto.
+    \paragraph{Obiettivo} Trovare il numero massimo di bambini che possono essere soddisfatti assegnando ad ogni bambino un solo sacchetto di cookies.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: Bambini[] = \{1, 2, 3\}, Cookies[] = \{1, 1, 2\}
+        \newline
+        \textbf{Output}: 2
+        \newline
+        \textbf{Spiegazione}: Possiamo assegnare il primo sacchetto al primo bambino e il terzo sacchetto al secondo bambino. Il terzo bambino non può essere soddisfatto, rimanendo così a digiuno.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: Bambini[] = \{100, 200\}, Cookies[] = \{6, 7\}
+        \newline
+        \textbf{Output}: 0
+        \newline
+        \textbf{Spiegazione}: I bambini vogliono più biscotti di quanti ne siano disponibili, quindi nessuno può essere soddisfatto.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: Bambini[] = \{8,4,7,8,2,3,5\}, Cookies[] = \{1,2,3,4,5,6,7\}
+        \newline
+        \textbf{Output}: 5
+        \newline
+        \textbf{Spiegazione}: Possiamo assegnare i sacchetti nel seguente ordine: B[0]-C[0], B[1]-C[3], B[2]-C[6], B[3]-C[5], B[4]-C[1], B[5]-C[2], B[6]-C[4]. \newline (si, lo so sono un figo. Ho veramente avuto voglia di scrivervi per bene tutto l'output)
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Numero minimo di dimensione D}
+    \paragraph{Input} Due interi S e D.
+    \paragraph{Obiettivo} Voi dovete trovare il numero minimo che ha esattamente D cifre e con la somma delle cifre esattamente uguale ad S.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: S = 9, D = 2
+        \newline
+        \textbf{Output}: 18
+        \newline
+        \textbf{Spiegazione}: Il numero di cifre è: 2 e la somma delle cifre è: 1 + 8 = 9.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: S = 20, D = 3
+        \newline
+        \textbf{Output}: 299
+        \newline
+        \textbf{Spiegazione}: Il numero di cifre è: 3 e la somma delle cifre è: 2 + 9 + 9 = 20.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: S = 16, D = 1
+        \newline
+        \textbf{Output}: -1
+        \newline
+        \textbf{Spiegazione}: Non esiste alcun numero di una cifra la cui somma delle cifre sia 16.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{La separazione dei beni}
+    \paragraph{Input} Un numero intero di beni N.
+    \paragraph{Obiettivo} Fare in modo di dividere i beni, i quali sono numerati da 1 a N senza ripetizioni, in due liste in modo che la somma dei valori in ogni lista sia la più equilibrata possibile.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: N = 5
+        \newline
+        \textbf{Output}: [[2,5],[1,3,4]]
+        \newline
+        \textbf{Spiegazione}: La somma delle partizioni sono rispettivamente: 7 e 8.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: N = 13
+        \newline
+        \textbf{Output}: [[9,11,12,13],[1,2,3,4,5,6,7,8,10]]
+        \newline
+        \textbf{Spiegazione}: La somma delle partizioni sono rispettivamente: 45 e 46.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: 7
+        \newline
+        \textbf{Output}: [[1,6,7],[2,3,4,5]]
+        \newline
+        \textbf{Spiegazione}: La somma delle partizioni sono rispettivamente: 14 e 14.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Le torri quasi gemelle}
+    \paragraph{Input} Un'array Altezza[] di interi che definisce l'altezza di ciascuna torre e un parametro K che indica di quanto può variare l'altezza di ciascuna torre.
+    \paragraph{Obiettivo} Sapendo che ogni torre PUÒ venir modificata esattamente di K unità (positivamente o negativamente), bisogna trovare la differenza minima presente tra le altezze di due torri presenti all'interno dell'array.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: K = 2, Altezza[] = \{1, 5, 8, 10\}
+        \newline
+        \textbf{Output}: 5
+        \newline
+        \textbf{Spiegazione}: L'array modificato è \{3, 3, 6, 8\}, e la differenza minima è 5.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: K = 9, Altezza[] = \{16, 3, 20, 9, 12\}
+        \newline
+        \textbf{Output}: 5
+        \newline
+        \textbf{Spiegazione}: L'array modificato è \{7, 12, 11, 9, 12\}, e la differenza minima è 5.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: K = 3, Altezza[] = \{3, 9, 12, 16, 20\}
+        \newline
+        \textbf{Output}: 11
+        \newline
+        \textbf{Spiegazione}: L'array modificato è \{6, 12, 9, 13, 17\}, e la differenza minima è 11.
+    \end{esempio}
