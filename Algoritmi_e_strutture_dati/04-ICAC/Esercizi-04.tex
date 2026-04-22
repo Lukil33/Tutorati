@@ -1,0 +1,141 @@
+\setlength{\parskip}{0pt}
+\titlespacing*{\subparagraph}{1em}{0em}{0em} 
+
+\thispagestyle{chapterInit}
+\section*{Il lucchetto}
+    \paragraph{Input} Due numeri di 4 cifre, A e B. A è il codice che vi viene fornito in partenza, B è la combinazione che dovete raggiungere.
+    \paragraph{Obiettivo} Il vostro obiettivo è quello di trovare il numero minimo di rotazioni necessarie per passare da A a B.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: A = 2345, B = 5432
+        \newline
+        \textbf{Output}: 8
+        \newline
+        \textbf{Spiegazione}: La prima rotella viene ruotata di 3 posizioni, la seconda di 1, la terza di 1 e la quarta di 3.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: A = 1919, B = 0000
+        \newline
+        \textbf{Output}: 4
+        \newline
+        \textbf{Spiegazione}: Ogni rotella deve essere ruotata di 1 posizione per raggiungere il valore desiderato.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Rod cutting}
+    \paragraph{Input} Un'asta di lunghezza N e un array di prezzi (P[]) che segna quanto vale il pezzo in base alla lunghezza.
+    \paragraph{Obiettivo} Determinare il ricavo massimo ottenibile tagliando l'asta e vendendone i vari pezzi.
+    \paragraph{Nota} Un pezzo di lunghezza 0 varrà sempre 0.
+    \begin{esempio}
+        \newline
+        \textbf{Input}:N = 8, P[] =  [0, 1, 5, 8, 9, 10, 17, 17, 20]
+        \newline 
+        \textbf{Output}: 22
+        \newline
+        \textbf{Spiegazione}: Possiamo tagliare l'asta in pezzi di lunghezza 2 e 6, ottenendo un ricavo di 5 + 17 = 22.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: N = 6, P[] =  [0, 1, 2, 3, 4, 5, 20]
+        \newline
+        \textbf{Output}: 20
+        \newline
+        \textbf{Spiegazione}: Possiamo tagliare l'asta in 1 pezzo singolo di lunghezza 6, ottenendo un ricavo di 20.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: N = 8, P[] =  [0, 3, 5, 8, 9, 10, 17, 17, 20]
+        \newline
+        \textbf{Output}: 24
+        \newline
+        \textbf{Spiegazione}: Possiamo ottenere un ricavo di 24 tagliando l'asta in 8 pezzi di lunghezza 1, ottenendo un ricavo di 8 * 3 = 24.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Matrix walk}
+    \paragraph{Input} Una matrice quadrata di interi M[][].
+    \paragraph{Obiettivo} Il nostro obiettivo è trovare l'insieme minimo di posizioni nella matrice tale che l'intera matrice possa essere coperta partendo dalle posizioni contenute nell'insieme e spostandosi. Possiamo spostarci solo verso i vicini che contengono valori minori o uguali al valore della cella corrente.
+    \paragraph{Nota} Un ``vicino'' di una cella è definito come una cella che condivide un lato con la cella data (movimenti ortogonali: su, giù, destra, sinistra).
+    \begin{esempio}
+        \newline
+        \textbf{Input}:
+        \begin{verbatim}
+            1 2 3
+            2 3 1
+            1 1 1
+        \end{verbatim}
+        \textbf{Output}: 
+        \begin{verbatim}
+            1 1
+            0 2
+        \end{verbatim}
+        \textbf{Spiegazione}: Partendo da (1,1) noi possiamo coprire 6 celle $(1,1)\rightarrow(1,0)\rightarrow(2,0)\rightarrow(2,1)\rightarrow(2,2)\rightarrow(1,2)$, partendo da (0,2) possiamo coprire 3 celle $(0,2)\rightarrow(0,1)\rightarrow(0,0)$.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: 
+        \begin{verbatim}
+            3 3
+            1 1
+        \end{verbatim}
+        \textbf{Output}: 
+        \begin{verbatim}
+            0 1
+        \end{verbatim}
+        \textbf{Spiegazione}: Partendo da (0,1) possiamo coprire tutte le celle della matrice con il seguente ordine: $(0,1)\rightarrow(0,0)\rightarrow(1,0)\rightarrow(1,1)$.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{L'amico greedy}
+    \paragraph{Input} Un'array di interi monete[] che contiene un numero pari N di monete.
+    \paragraph{Obiettivo} Due giocatori stanno giocando ad un gioco, ad ogni turno il giocatore assegnato può scegliere di prendere la moneta dalla prima o dall'ultima posizione. Una volta presa una moneta questa viene rimossa dall'array, il gioco termina quando non ci sono più monete da prendere, e vince il giocatore con più soldi. Il vostro obiettivo è quello di trovare il massimo numero di monete che il primo giocatore può ottenere, assumendo che anche l'altro giocatore effettui delle scelte greedy.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: monete[] = [5, 3, 7, 10]
+        \newline
+        \textbf{Output}: 15
+        \newline
+        \textbf{Spiegazione}: Il massimo valore che si può ottenere è 15 prendendo la moneta da 10 e poi quella da 5.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: monete[] = [8, 15, 3, 7]
+        \newline
+        \textbf{Output}: 22
+        \newline
+        \textbf{Spiegazione}: Il massimo valore che si può ottenere è 22.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: soldi[] = [2, 2, 2, 2]
+        \newline
+        \textbf{Output}: 4
+        \newline
+        \textbf{Spiegazione}: Mi sembra stupido provare a spiegarvelo.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Altezza massima dell'albero}
+    \paragraph{Input} Un albero A.
+    \paragraph{Obiettivo} Dato un albero con n nodi e $n-1$ archi, il compito è quello di trovare l'altezza massima dell'albero quando uno qualsiasi dei suoi nodi viene considerato come radice.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: Guardate l'immagine albero\_1.jpg che vi avrò caricato sulla cartella (scusate ma non sono riuscito a caricarle correttamente)
+        \newline
+        \textbf{Output}: 5
+        \newline
+        \textbf{Spiegazione}: L'altezza massima si può avere prendendo come radice il nodo 5.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: Guardate l'immagine albero\_2.jpg che vi avrò caricato sulla cartella (scusate ma non sono riuscito a caricarle correttamente)
+        \newline
+        \textbf{Output}: 5
+        \newline
+        \textbf{Spiegazione}: L'altezza massima si può avere prendendo come radice il nodo 6.
+    \end{esempio}
