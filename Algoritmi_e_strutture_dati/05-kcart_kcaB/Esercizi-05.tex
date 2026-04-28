@@ -1,0 +1,148 @@
+\setlength{\parskip}{0pt}
+\titlespacing*{\subparagraph}{1em}{0em}{0em} 
+
+\thispagestyle{chapterInit}
+\section*{Flusso pesato}
+    \paragraph{Input} Vi viene data una matrice di adiacenza M[][] contenenti i pesi di un grafo aciclico, un nodo di partenza N ed una distanza target D.
+    \paragraph{Obiettivo} Il vostro obiettivo è quello di trovare se esiste un cammino semplice e aciclico tale che la somma dei pesi sia maggiore o uguale al target. Il cammino può finire su un qualsiasi altro nodo del grafo.
+        \begin{esempio}
+        \newline
+        \textbf{Input}: N = 0, D = 4
+        \begin{verbatim}
+M[][] = - 2 3
+        2 - 1
+        3 1 -
+        \end{verbatim}
+        \textbf{Output}: True
+        \textbf{Spiegazione}: Partendo da 0 possiamo prendere il seguente percorso: $0 \rightarrow 2 \rightarrow 1$, il che porta ad una distanza totale di 4.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: N = 0, D = 7
+        \begin{verbatim}
+M[][] = - 2 3
+        2 - 1
+        3 1 -
+        \end{verbatim}
+        \textbf{Output}: False
+        \textbf{Spiegazione}: Partendo da 0 non possiamo trovare un cammino di distanza 7 senza utilizzare dei cicli.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: N = 0, D = 7
+        \begin{verbatim}
+M[][] = - 2 3 4
+        2 - 1 -
+        3 1 - 1
+        4 - 1 -
+        \end{verbatim}
+        \textbf{Output}: True
+        \textbf{Spiegazione}: Partendo da 0 possiamo prendere il seguente percorso: $0 \rightarrow 3 \rightarrow 2 \rightarrow 0 \rightarrow 1$, il che porta ad una distanza totale di 10.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Partizionamento eguale}
+    \paragraph{Input} Vi viene fornito un array: arr[] contenente degli interi N.
+    \paragraph{Obiettivo} Dovete dividere i numeri presenti all'interno dell'array in 2 sottoarray in modo che differenza assoluta tra la somma degli elementi presenti all'interno deve essere 0.
+    \begin{itemize}
+        \item Se la dimesione dell'array è pari allora ogni sottoarray deve contenere $n/2$ elementi
+        \item Se la dimesione dell'array è dispari allora i sottoarray devono contenere rispettivamente $n/2$ e $(n/2)+1$ elementi
+    \end{itemize}
+    Se il tutto non è possibile si deve ritornare -1.
+    \begin{esempio}
+        \newline
+        \textbf{Input}: arr[] = [2, 5, 7, 10]
+        \newline
+        \textbf{Output}: [2,10],[5,7]
+        \newline
+        \textbf{Spiegazione}: La differenza assolua tra la somma dei due sottoarray è 0.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: monete[] = [6, 15, 2, 7]
+        \newline
+        \textbf{Output}: -1
+        \newline
+        \textbf{Spiegazione}: Non si riescono a creare due sottoinsiemi mantenendo i constraint.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: soldi[] = [1,2,3]
+        \newline
+        \textbf{Output}: [3],[1,2]
+        \newline
+        \textbf{Spiegazione}: Mi sembra stupido provare a spiegarvelo.
+    \end{esempio}
+
+\newpage
+\thispagestyle{chapterInit}
+\section*{Somma combinatoria}
+    \paragraph{Input} vi viene fornito un array: arr[] e un intero T
+    \paragraph{Obiettivo} Dovete trovare tutte le combinazioni di array dove la somma degli elementi scelti è uguale a quella del target intero fornito. Se il tutto non è possibile si deve ritornare la lista vuota.
+    \paragraph{Note} Potete selezionare lo stesso elemento più volte e al contempo la rotazione degli elementi all'interno di una soluzione valida non è da tenere in considerazione. 
+    \begin{esempio}
+        \newline
+        \textbf{Input}: arr[] = [1,2,3], T = 5
+        \newline
+        \textbf{Output}: [[1,1,1,1,1],[1,1,1,2],[1,1,3],[2,3]]
+        \newline
+        \textbf{Spiegazione}: Tutte le combinazioni di elementi hanno somma 5.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: arr[] = [2, 4], target = 1
+        \newline
+        \textbf{Output}: []
+        \newline
+        \textbf{Spiegazione}: Non ci sono combinazioni possibili di elementi di somma 1.
+    \end{esempio}
+    \begin{esempio}
+        \newline
+        \textbf{Input}: arr[] = [1,3], target = 3
+        \newline
+        \textbf{Output}: [[1,1,1],[3]]
+        \newline
+        \textbf{Spiegazione}: Tutte le combinazioni di elementi hanno somma 3.
+    \end{esempio}
+\newpage
+\thispagestyle{chapterInit}
+\section*{Mickey Mouse}
+    \paragraph{Input} Viene fornita una matrice NxN che rappresenta un labirinto.
+    \paragraph{Obiettivo} Sapendo che come topo partite dalla cella (0,0), il vostro obbiettivo è quello di raggiungere l'angolo (n,n).
+    \begin{itemize}
+        \item Il topo si può muovere a destra o in basso.
+        \item Uno 0 all'interno della matrice significa un'vicolo cieco, non potete finire su quella cella.
+        \item Un valore diverso da 0 rappresenta il massimo numero di salti che il topo può fare da quella cella.
+    \end{itemize}
+    Il vostro obbiettivo è quello di ritornare una matrice simile di dimensione NxN dove valgono le seguenti regole:
+    \begin{itemize}
+        \item 1 in posizione (i,j), indica che la cella è parte del percorso
+        \item 0 in posizione (i,j), indica che la cella NON fa parte del percorso
+    \end{itemize}
+    Se sono disponibili più soluzioni fornitene semplicemente una
+    \begin{esempio}
+        \begin{verbatim}
+Input: 2 1 0 0
+       3 0 0 1
+       0 1 0 1
+       0 0 0 1
+        \end{verbatim}
+        \begin{verbatim}
+Output: 1 0 0 0
+        1 0 0 1
+        0 0 0 1
+        0 0 0 1
+        \end{verbatim}
+    \end{esempio}
+    \begin{esempio}
+        \begin{verbatim}
+Input: 2 1 0 0
+       2 0 0 1
+       0 1 0 1
+       0 0 0 1
+        \end{verbatim}
+        \textbf{Output}: [[-1]]
+        \newline
+        \textbf{Spiegazione}: Non esistono percorsi validi, quindi l'output è [-1].
+    \end{esempio}
